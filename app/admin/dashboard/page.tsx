@@ -7,7 +7,7 @@ export default function AdminDashboardPage() {
         <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
             {/* Header */}
             <div className="border-b bg-white dark:bg-slate-950">
-                <div className="container px-4 md:px-6 py-4">
+                <div className="container py-4">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4">
                             <Button variant="ghost" asChild>
@@ -30,7 +30,7 @@ export default function AdminDashboardPage() {
             </div>
 
             {/* Main Content */}
-            <div className="container px-4 md:px-6 py-8">
+            <div className="container py-8">
                 <div className="grid gap-6">
                     {/* Welcome Section */}
                     <div className="bg-white dark:bg-slate-950 rounded-lg border p-6">
