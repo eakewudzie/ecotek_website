@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-800 mt-6 pt-6 text-center text-sm text-slate-400">
-          <p>&copy; 2024 Ecotek Construction. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Ecotek Construction. All rights reserved.</p>
         </div>
       </div>
     </footer>

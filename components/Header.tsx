@@ -17,6 +17,9 @@ export default function Header() {
                     <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
                         Home
                     </Link>
+                    {/* <Link href="/eunice" className="text-sm font-medium transition-colors hover:text-primary">
+                        Eunice
+                    </Link> */}
                     <Link href="/projects" className="text-sm font-medium transition-colors hover:text-primary">
                         Projects
                     </Link>

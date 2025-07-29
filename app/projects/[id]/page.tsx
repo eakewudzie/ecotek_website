@@ -10,10 +10,10 @@ export default async function ProjectDetailsPage({ params }: ProjectDetailsPageP
     const { id } = await params;
     const project = projectDetails[id];
 
+
     if (!project) {
         notFound();
     }
-
     return (
         <div className="py-16 bg-slate-50 dark:bg-slate-900 min-h-screen">
             <div className="container px-4 md:px-6">
