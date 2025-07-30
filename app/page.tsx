@@ -8,10 +8,10 @@ import { featuredProjects } from "@/data/projects";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <HeroSection />
+      <HeroSection day="Tomorrow" />
+      {/* <HeroSection day="Today" /> */}
       <IntroSection />
 
-      {/* Featured Projects Section */}
       <section className="py-16 bg-slate-50 dark:bg-slate-900">
         <div className="container">
           <div className="text-center mb-12">
