@@ -1,247 +1,324 @@
-# Ecotek Construction Website
+# Ecotek Architectural Website
 
-A modern, responsive web application for Ecotek construction company to showcase their architectural drawings and project portfolio.
+A cutting-edge, responsive web application for Ecotek architectural firm showcasing innovative design solutions, project portfolio, and comprehensive services.
 
-## 🏗️ Features
+## 🌟 Features
 
-- **Modern Design**: Clean, professional interface with responsive design
-- **Project Gallery**: Showcase construction projects with detailed information
-- **Interactive Components**: Modal dialogs for project previews
-- **Mobile Responsive**: Optimized for all device sizes
-- **Component-Based Architecture**: Built with reusable React components
-- **Centralized Data Management**: All static data organized in `/data` folder
-- **Type Safety**: Centralized interfaces in `/interfaces` folder
-- **Admin Panel**: Simple authentication system for content management
+### 🎨 **Modern Design & UX**
 
-## 🛠️ Tech Stack
+- Clean, professional interface with responsive mobile-first design
+- Advanced gradient backgrounds and smooth transitions
+- Interactive hover effects and micro-animations
+- Fully accessible navigation with mobile menu
+
+### 📱 **Responsive Architecture**
+
+- Adaptive layout for desktop, tablet, and mobile devices
+- Collapsible mobile navigation with smooth transitions
+- Optimized touch interactions and gesture support
+- Consistent experience across all screen sizes
+
+### 🏢 **Comprehensive Content**
+
+- **Homepage**: Enhanced with stats, testimonials, and service highlights
+- **Portfolio**: Project showcase with detailed case studies
+- **Services**: Complete service offerings with feature lists
+- **About**: Company story, values, and team information
+- **Contact**: Interactive contact form with validation
+
+### 🔐 **Professional Admin System**
+
+- Secure authentication with route protection
+- Modern sidebar navigation with clean dashboard
+- Project management interface for content updates
+- Persistent session management with logout functionality
+- **Admin Access Code**: `admin123`
+
+### 🏗️ **Technical Excellence**
 
 - **Framework**: Next.js 15 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Icons**: Lucide React
-- **Image Optimization**: Next.js Image component
-- **Backend**: Firebase (configured but not implemented)
+- **Language**: TypeScript for type safety
+- **Styling**: Tailwind CSS with custom configurations
+- **UI Components**: shadcn/ui component library
+- **Icons**: Lucide React icon system
+- **Image Optimization**: Next.js Image component with remote patterns
+- **Performance**: Optimized build with static generation
 
 ## 📁 Project Structure
 
 ```
 ecotek_website/
-├── app/                    # Next.js App Router pages
-│   ├── layout.tsx         # Root layout with Header/Footer
-│   ├── page.tsx           # Home page
-│   ├── admin/             # Admin section
-│   │   ├── page.tsx       # Admin login page
-│   │   └── dashboard/     # Admin dashboard
-│   │       └── page.tsx   # Dashboard main page
-│   └── projects/          # Projects pages
-│       ├── page.tsx       # Projects gallery
-│       └── [id]/          # Dynamic project details
-│           └── page.tsx   # Individual project page
-├── components/            # React components
-│   ├── ui/               # shadcn/ui components
-│   ├── Header.tsx        # Navigation header
-│   ├── HeroSection.tsx   # Landing hero section
-│   ├── IntroSection.tsx  # About section
-│   ├── ProjectCard.tsx   # Individual project card
-│   ├── GalleryGrid.tsx   # Projects grid layout
-│   └── Footer.tsx        # Site footer
-├── data/                 # Centralized static data
-│   └── projects.ts       # Project data and exports
-├── interfaces/           # TypeScript interfaces
-│   └── index.ts         # All project interfaces
-├── lib/                  # Utility functions
-│   ├── utils.ts          # General utilities
-│   └── firebase.ts       # Firebase configuration
-└── public/               # Static assets
+├── app/                          # Next.js App Router pages
+│   ├── layout.tsx               # Root layout with Header/Footer
+│   ├── page.tsx                 # Enhanced homepage with modern design
+│   ├── admin/                   # Admin management system
+│   │   ├── layout.tsx          # Admin auth provider wrapper
+│   │   ├── page.tsx            # Admin login page
+│   │   └── dashboard/          # Admin dashboard
+│   │       └── page.tsx        # Dashboard with sidebar & project management
+│   ├── portfolio/              # Project showcase (renamed from projects)
+│   │   ├── page.tsx           # Portfolio gallery
+│   │   └── [id]/              # Dynamic project details
+│   │       └── page.tsx       # Individual project pages
+│   ├── services/              # Service offerings
+│   │   └── page.tsx          # Comprehensive services page
+│   ├── about/                 # Company information
+│   │   └── page.tsx          # About page with story & values
+│   └── contact/               # Contact & inquiries
+│       └── page.tsx          # Contact form with validation
+├── components/                # React components
+│   ├── ui/                   # shadcn/ui component library
+│   ├── auth/                 # Authentication components
+│   │   └── AuthProvider.tsx  # Auth context & route protection
+│   ├── Header.tsx           # Responsive navigation with mobile menu
+│   ├── HeroSection.tsx      # Landing hero section
+│   ├── IntroSection.tsx     # Company introduction
+│   ├── ProjectCard.tsx      # Project display cards
+│   ├── GalleryGrid.tsx      # Project grid layout
+│   └── Footer.tsx           # Site footer
+├── data/                     # Centralized data management
+│   ├── projects.ts          # Project portfolio data
+│   └── homepage.ts          # Homepage content (stats, testimonials, etc.)
+├── interfaces/              # TypeScript interfaces
+│   └── index.ts            # Type definitions for all data structures
+├── lib/                     # Utility functions
+│   ├── utils.ts            # General utility functions
+│   ├── auth.ts             # Authentication utilities
+│   └── firebase.ts         # Firebase configuration (future use)
+└── public/                  # Static assets
 ```
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js 18+
-- npm or yarn
+- **Node.js** 18+
+- **npm** or **yarn**
 
-### Installation
+### Installation & Setup
 
-1. Clone the repository:
+1. **Clone the repository**
 
 ```bash
 git clone <repository-url>
 cd ecotek_website
 ```
 
-2. Install dependencies:
+2. **Install dependencies**
 
 ```bash
 npm install
+# or
+yarn install
 ```
 
-3. Run the development server:
+3. **Start development server**
 
 ```bash
 npm run dev
+# or
+yarn dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. **Open in browser**
+   - Navigate to [http://localhost:3000](http://localhost:3000)
+   - The site will automatically reload on changes
 
-## 📄 Pages & Routes
+### Building for Production
 
-- **Home (`/`)**: Landing page with hero section, about section, and featured projects
-- **Projects (`/projects`)**: Gallery of all construction projects
-- **Project Details (`/projects/[id]`)**: Individual project information and images
-- **Admin Login (`/admin`)**: Admin authentication page
-- **Admin Dashboard (`/admin/dashboard`)**: Admin panel for content management
+```bash
+# Build the application
+npm run build
 
-## 🧩 Components
+# Start production server
+npm start
+```
 
-### Core Components
+## 🌐 Pages & Routes
 
-- **Header**: Sticky navigation with Ecotek branding and nav links
-- **HeroSection**: Full-width landing section with headline and CTA
-- **IntroSection**: Company information and statistics
-- **ProjectCard**: Individual project display with modal preview
-- **GalleryGrid**: Responsive grid layout for projects
-- **Footer**: Contact information and social links
+### **Public Pages**
 
-### UI Components (shadcn/ui)
+- **Home (`/`)**: Modern homepage with stats, services, testimonials, and CTAs
+- **Portfolio (`/portfolio`)**: Complete project gallery with filtering
+- **Portfolio Details (`/portfolio/[id]`)**: Detailed project information with images
+- **Services (`/services`)**: Comprehensive service offerings and capabilities
+- **About (`/about`)**: Company story, values, team, and achievements
+- **Contact (`/contact`)**: Contact form with validation and company information
 
-- Button
-- Card
-- Dialog (for project previews)
-- Input (for admin forms)
+### **Admin System**
 
-## 🔐 Admin Access
+- **Admin Login (`/admin`)**: Secure authentication portal
+  - **Access Code**: `admin123`
+  - Persistent session management
+  - Auto-redirect for authenticated users
+- **Admin Dashboard (`/admin/dashboard`)**: Full management interface
+  - Clean sidebar navigation
+  - Project management tools
+  - Real-time statistics
+  - Recent activity tracking
+  - Secure logout functionality
 
-### Authentication
+## 🔐 Admin System Details
 
-The admin panel uses a simple code-based authentication system:
+### **Authentication**
 
-- **URL**: `/admin`
+- **Access URL**: `/admin`
 - **Login Code**: `admin123`
-- **Dashboard**: `/admin/dashboard`
+- **Session Management**: Persistent login state with localStorage
+- **Route Protection**: Automatic redirect for unauthenticated users
+- **Secure Logout**: Complete session cleanup
 
-### Admin Features
+### **Dashboard Features**
 
-- **Simple Authentication**: Code-based login system
-- **Dashboard Overview**: Quick stats and project information
-- **Responsive Design**: Works on all device sizes
-- **Future Ready**: Prepared for advanced content management features
+- **Project Management**: Add new projects with image, name, date, location
+- **Statistics Overview**: Real-time project counts and metrics
+- **Recent Activity**: Timeline of recent system changes
+- **Responsive Interface**: Optimized for desktop and mobile
+- **Clean UI**: Professional sidebar navigation
+
+### **Security Features**
+
+- Client-side authentication with persistent sessions
+- Route guards on protected pages
+- Automatic session validation
+- Secure logout with state cleanup
 
 ## 📊 Data Management
 
-### Centralized Data Structure
+### **Centralized Structure**
 
-All static data is organized in the `/data` folder:
+All content is organized in the `/data` folder for easy management:
 
-- **`/data/projects.ts`**: Contains all project data including:
-  - `sampleProjects`: Array of all projects
-  - `featuredProjects`: Array of featured projects for home page
-  - `projectDetails`: Detailed project information for individual pages
+- **`/data/projects.ts`**: Complete project portfolio
 
-### Type Safety
+  - `sampleProjects`: All available projects
+  - `featuredProjects`: Homepage highlights
+  - `projectDetails`: Detailed project information
 
-All TypeScript interfaces are centralized in `/interfaces/index.ts`:
+- **`/data/homepage.ts`**: Homepage content
+  - `stats`: Company statistics and metrics
+  - `services`: Service offerings with features
+  - `testimonials`: Client feedback and reviews
+  - `achievements`: Company accomplishments
 
-- `Project`: Basic project interface
-- `ProjectDetails`: Extended project interface with additional fields
-- `ProjectCardProps`: Props for ProjectCard component
-- `GalleryGridProps`: Props for GalleryGrid component
-- `ProjectDetailsPageProps`: Props for project details page
+### **Type Safety**
 
-## 🔥 Firebase Integration
+All data structures are typed in `/interfaces/index.ts`:
 
-Firebase SDK is installed and configured in `lib/firebase.ts` for future implementation:
-
-- **Firebase Auth**: User authentication
-- **Firestore**: Project data storage
-- **Firebase Storage**: Image and file storage
-
-### Environment Variables
-
-Create a `.env.local` file with your Firebase configuration:
-
-```env
-NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
-```
-
-## 🎨 Customization
-
-### Styling
-
-The project uses Tailwind CSS with a custom color scheme. Main colors are defined in the Tailwind config and can be customized in `tailwind.config.js`.
-
-### Content Management
-
-- **Add New Projects**: Update `data/projects.ts` with new project data
-- **Modify Company Info**: Update components directly
-- **Replace Images**: Update image URLs in the data files
-- **Add New Interfaces**: Extend `/interfaces/index.ts` for new data types
+- `Project`: Basic project structure
+- `ProjectDetails`: Extended project information
+- Component prop types for consistent data flow
 
 ## 📱 Responsive Design
 
-The website is fully responsive with breakpoints for:
+### **Breakpoints**
 
-- Mobile: < 768px
-- Tablet: 768px - 1024px
-- Desktop: > 1024px
+- **Mobile**: < 768px (touch-optimized)
+- **Tablet**: 768px - 1024px (adaptive layout)
+- **Desktop**: > 1024px (full feature set)
+
+### **Mobile Features**
+
+- Hamburger navigation menu
+- Touch-friendly interactions
+- Optimized image loading
+- Consistent user experience across devices
+
+## 🎨 Customization
+
+### **Styling**
+
+- **Framework**: Tailwind CSS with custom configurations
+- **Theme**: Professional architectural color scheme
+- **Components**: shadcn/ui for consistent design system
+- **Responsive**: Mobile-first approach with custom breakpoints
+
+### **Content Updates**
+
+- **Projects**: Update `/data/projects.ts` for new portfolio items
+- **Homepage**: Modify `/data/homepage.ts` for stats, testimonials, services
+- **Company Info**: Update individual page components
+- **Images**: Replace URLs in data files (uses Unsplash optimization)
 
 ## 🖼️ Image Optimization
 
-The project uses Next.js Image component for optimal performance:
+Next.js Image component provides automatic optimization:
 
-- Automatic image optimization
-- Responsive image loading
-- WebP format support
-- Lazy loading for better performance
+- **WebP Conversion**: Automatic modern format delivery
+- **Responsive Loading**: Device-appropriate image sizes
+- **Lazy Loading**: Performance-optimized loading
+- **CDN Integration**: Configured for Unsplash remote patterns
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically
-
-### Other Platforms
-
-Build the project for production:
+### **Vercel (Recommended)**
 
 ```bash
+# Push to GitHub
+git push origin main
+
+# Deploy via Vercel dashboard or CLI
+vercel --prod
+```
+
+### **Other Platforms**
+
+```bash
+# Build for production
 npm run build
+
+# Export static files (if needed)
+npm run export
+
+# Start production server
 npm start
 ```
 
 ## 🔮 Future Enhancements
 
-- [ ] Firebase integration for dynamic content
-- [ ] Advanced admin panel with project management
-- [ ] Contact form functionality
-- [ ] Blog/news section
-- [ ] SEO optimization
-- [ ] Analytics integration
-- [ ] Image upload functionality
-- [ ] Search and filtering for projects
-- [ ] User management system
-- [ ] Content editing interface
+### **Planned Features**
 
-## 📝 License
+- [ ] **Firebase Integration**: Dynamic content management
+- [ ] **Advanced Admin**: Full project CRUD operations
+- [ ] **Contact Integration**: Email service connectivity
+- [ ] **Blog System**: News and articles section
+- [ ] **SEO Optimization**: Meta tags and structured data
+- [ ] **Analytics**: User behavior tracking
+- [ ] **Search & Filter**: Advanced portfolio navigation
+- [ ] **Image Upload**: Admin file management
+- [ ] **User Management**: Multi-admin support
+- [ ] **CMS Integration**: Headless content management
 
-This project is licensed under the MIT License.
+### **Technical Improvements**
+
+- [ ] Database integration (PostgreSQL/MongoDB)
+- [ ] API route optimization
+- [ ] Progressive Web App (PWA) features
+- [ ] Advanced caching strategies
+- [ ] Multi-language support
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
+3. **Commit** your changes (`git commit -m 'Add AmazingFeature'`)
+4. **Push** to the branch (`git push origin feature/AmazingFeature`)
+5. **Open** a Pull Request
 
 ---
 
-Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
+## 💡 Support
+
+For support, questions, or contributions:
+
+- **Issues**: GitHub Issues tab
+- **Discussions**: GitHub Discussions
+- **Documentation**: This README and inline code comments
+
+---
+
+**Built with ❤️ using Next.js, TypeScript, Tailwind CSS, and shadcn/ui**
