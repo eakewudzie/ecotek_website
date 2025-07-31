@@ -1,5 +1,15 @@
 import { Project, ProjectDetails } from "@/interfaces";
 
+// interface Project {
+//   id: string;
+//   title: string;
+//   description: string;
+//   imageUrl: string;
+//   category: string;
+//   date: string;
+//   location: string;
+// }
+
 export const sampleProjects: Project[] = [
   {
     id: "1",
