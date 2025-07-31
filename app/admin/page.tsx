@@ -35,47 +35,61 @@ export default function AdminLoginPage() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
             <div className="w-full max-w-md">
-                <div className="bg-white dark:bg-slate-950 rounded-lg border p-8">
-                    <div className="text-center mb-6">
-                        <div className="mx-auto mb-4 h-12 w-12 rounded-lg bg-primary flex items-center justify-center">
-                            <Lock className="h-6 w-6 text-primary-foreground" />
+                <div className="bg-white dark:bg-slate-950 rounded-xl border shadow-xl p-8">
+                    <div className="text-center mb-8">
+                        <div className="mx-auto mb-6 h-16 w-16 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg">
+                            <Lock className="h-8 w-8 text-primary-foreground" />
                         </div>
-                        <h2 className="text-2xl font-semibold">Admin Access</h2>
-                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                        <h2 className="text-3xl font-bold mb-2">Admin Access</h2>
+                        <p className="text-gray-600 dark:text-gray-400">
                             Enter the admin login code to continue
                         </p>
                     </div>
-                    <form onSubmit={handleSubmit} className="space-y-4">
+
+                    <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="space-y-2">
                             <Input
                                 type="password"
                                 placeholder="Enter login code"
                                 value={code}
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCode(e.target.value)}
-                                className="text-center text-lg tracking-widest"
+                                className="text-center text-lg tracking-widest h-12 border-2 focus:border-primary"
                                 disabled={isLoading}
                             />
                             {error && (
-                                <p className="text-sm text-red-500 text-center">{error}</p>
+                                <div className="flex items-center justify-center space-x-2 text-sm text-red-500">
+                                    <div className="h-1 w-1 bg-red-500 rounded-full"></div>
+                                    <span>{error}</span>
+                                </div>
                             )}
                         </div>
+
                         <Button
                             type="submit"
-                            className="w-full"
+                            className="w-full h-12 text-lg font-semibold bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70"
                             disabled={isLoading || !code}
                         >
                             {isLoading ? (
-                                "Verifying..."
+                                <div className="flex items-center space-x-2">
+                                    <div className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                    <span>Verifying...</span>
+                                </div>
                             ) : (
                                 <>
                                     Access Dashboard
-                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                    <ArrowRight className="ml-2 h-5 w-5" />
                                 </>
                             )}
                         </Button>
                     </form>
+
+                    <div className="mt-8 text-center">
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
+                            Secure admin access for Ecotek Construction
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
