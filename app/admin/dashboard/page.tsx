@@ -29,10 +29,19 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useAuth, useRequireAuth } from "@/components/auth/AuthProvider";
+import { AuthProvider } from "@/components/auth/AuthProvider";
 import { sampleProjects } from "@/data/projects";
 import GalleryGrid from "@/components/GalleryGrid";
 
 export default function AdminDashboardPage() {
+    return (
+        <AuthProvider>
+            <AdminDashboard />
+        </AuthProvider>
+    );
+}
+
+function AdminDashboard() {
     const { logout } = useAuth();
     const { isAuthenticated, isLoading } = useRequireAuth();
     const [activeSection, setActiveSection] = useState("dashboard");

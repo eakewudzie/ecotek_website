@@ -6,8 +6,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Lock, ArrowRight } from "lucide-react";
 import { useAuth } from "@/components/auth/AuthProvider";
+import { AuthProvider } from "@/components/auth/AuthProvider";
 
-export default function AdminLoginPage() {
+export default function AdminPage() {
+    return (
+        <AuthProvider>
+            <AdminLoginPage />
+        </AuthProvider>
+    );
+}
+
+function AdminLoginPage() {
     const [code, setCode] = useState("");
     const [error, setError] = useState("");
     const [isLoading, setIsLoading] = useState(false);

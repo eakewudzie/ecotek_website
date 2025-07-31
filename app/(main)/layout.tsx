@@ -1,8 +1,7 @@
-"use client";
-
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-export default function AdminLayout({
+export default function MainLayout({
     children,
 }: {
     children: React.ReactNode;
@@ -13,6 +12,7 @@ export default function AdminLayout({
             <main className="min-h-screen">
                 {children}
             </main>
+            <Footer />
         </>
     );
-}
+} 
