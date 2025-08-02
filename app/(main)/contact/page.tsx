@@ -128,7 +128,7 @@ export default function ContactPage() {
                                                 type="tel"
                                                 value={formData.phone}
                                                 onChange={handleChange}
-                                                placeholder="eg: +233....."
+                                                placeholder="eg: +233..."
                                             />
                                         </div>
                                         <div>
