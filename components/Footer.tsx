@@ -21,7 +21,7 @@ export default function Footer() {
             <div className="space-y-2 text-sm text-slate-400">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+233240278435</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
@@ -29,7 +29,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span>123 Construction Ave, City, State</span>
+                <span>Accra, Ghana</span>
               </div>
             </div>
           </div>

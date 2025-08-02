@@ -44,12 +44,12 @@ export default function ContactPage() {
         {
             icon: MapPin,
             title: "Address",
-            content: "123 Architecture Lane\nDesign District, DD 12345"
+            content: "Accra, Ghana"
         },
         {
             icon: Phone,
             title: "Phone",
-            content: "+1 (555) 123-4567"
+            content: "+233240278435"
         },
         {
             icon: Mail,
@@ -128,7 +128,7 @@ export default function ContactPage() {
                                                 type="tel"
                                                 value={formData.phone}
                                                 onChange={handleChange}
-                                                placeholder="(555) 123-4567"
+                                                placeholder="eg: +233..."
                                             />
                                         </div>
                                         <div>
